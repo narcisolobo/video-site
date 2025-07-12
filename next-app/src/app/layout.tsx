@@ -18,11 +18,11 @@ const metadata: Metadata = {
   openGraph: {
     title: "WOS Can Code: Mission Control",
     description: "Home base for lecture recordings, resources, and more.",
-    url: "",
+    url: "https://wos-mission-control.cisocodes.com/",
     siteName: "Mission Control",
     images: [
       {
-        url: "",
+        url: "https://wos-mission-control.cisocodes.com/og-image.png",
         width: 1200,
         height: 630,
       },
