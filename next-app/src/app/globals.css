@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes:
+    acid --default,
+    synthwave --prefersdark;
+}
+
+@theme inline {
+  --font-sans: var(--font-dosis);
+  --font-display: var(--font-orbitron);
+}
+
+body {
+  background-image: url("/blurry-gradient-haikei.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
