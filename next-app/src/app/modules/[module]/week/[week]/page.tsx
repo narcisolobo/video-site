@@ -2,7 +2,7 @@ import WeekSection from "@/sections/week-section";
 import { kebabToTitleCase } from "@/utils/kebab-to-title-case";
 
 interface WeekPageProps {
-  params: { module: string; week: string };
+  params: Promise<{ module: string; week: string }>;
 }
 
 async function WeekPage({ params }: WeekPageProps) {
