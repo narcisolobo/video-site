@@ -1,4 +1,5 @@
 import { urlFor } from "@/lib/sanity";
+import Image from "next/image";
 import { LectureRecording } from "@/sanity-studio/sanity.types";
 
 interface VideoListProps {
@@ -32,7 +33,14 @@ function VideoList({ recordings }: VideoListProps) {
           />
           <figure>
             {r.thumbnail && (
-              <img src={urlFor(r.thumbnail).width(800).url()} alt={r.title} />
+              <Image
+                src={urlFor(r.thumbnail).width(500).url()}
+                alt={r.title || "Lecture thumbnail"}
+                width={500}
+                height={340}
+                className="rounded-t-lg"
+                priority={false}
+              />
             )}
           </figure>
           <div className="card-body justify-between p-6">

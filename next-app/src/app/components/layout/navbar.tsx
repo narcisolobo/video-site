@@ -1,6 +1,7 @@
 import ThemeSwitcher from "@/ui/theme-switcher";
 import Link from "next/link";
 import { HiMenu } from "react-icons/hi";
+import Image from "next/image";
 
 function Navbar() {
   return (
@@ -19,7 +20,13 @@ function Navbar() {
             href="/"
             className="btn btn-ghost font-display text-xl uppercase"
           >
-            🚀 mission control
+            <Image
+              src="/favicon-32x32.png"
+              width={32}
+              height={32}
+              alt="blast off"
+            />{" "}
+            mission control
           </Link>
         </div>
         <div className="flex-none">
