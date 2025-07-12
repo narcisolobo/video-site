@@ -1,6 +1,9 @@
 import { createClient } from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
+import { LectureRecording } from "@/sanity-studio/sanity.types";
+
+type ThumbnailType = NonNullable<LectureRecording["thumbnail"]>;
 
 const client = createClient({
   projectId: "5oob6xe3",
@@ -10,7 +13,7 @@ const client = createClient({
 });
 
 const builder = imageUrlBuilder(client);
-function urlFor(source: SanityImageSource) {
+function urlFor(source: ThumbnailType) {
   return builder.image(source);
 }
 

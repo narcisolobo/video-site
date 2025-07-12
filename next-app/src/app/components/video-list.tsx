@@ -31,7 +31,9 @@ function VideoList({ recordings }: VideoListProps) {
             aria-label={`Go to video: ${r.title}`}
           />
           <figure>
-            <img src={urlFor(r.thumbnail).width(800).url()} alt={r.title} />
+            {r.thumbnail && (
+              <img src={urlFor(r.thumbnail).width(800).url()} alt={r.title} />
+            )}
           </figure>
           <div className="card-body justify-between p-6">
             <div className="collapse flex-grow">
