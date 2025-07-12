@@ -1,10 +1,19 @@
+import Image from "next/image";
+
 function HeroSection() {
   return (
     <section id="home" className="flex flex-col gap-4">
       <div className="card bg-base-100 card-lg shadow-sm">
         <div className="card-body">
           <h1 className="card-title font-display text-3xl">
-            🚀 Mission Control
+            <Image
+              src="/favicon-32x32.png"
+              width={32}
+              height={32}
+              alt="Blast off!"
+              priority
+            />{" "}
+            Mission Control
           </h1>
         </div>
       </div>
