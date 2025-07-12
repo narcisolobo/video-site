@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function HeroSection() {
   return (
@@ -26,12 +27,18 @@ function HeroSection() {
             always in orbit.
           </p>
           <div className="card-actions justify-end">
-            <a href="#" className="btn btn-primary text-lg">
+            <Link
+              href="/modules/programming-basics/week/1"
+              className="btn btn-primary text-lg"
+            >
               Videos
-            </a>
-            <a href="#" className="btn btn-outline btn-primary text-lg">
+            </Link>
+            <Link
+              href="/helpful-links"
+              className="btn btn-outline btn-primary text-lg"
+            >
               Helpful Links
-            </a>
+            </Link>
           </div>
         </div>
       </div>
