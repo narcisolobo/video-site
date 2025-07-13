@@ -26,7 +26,8 @@
       "@/ui/*": ["./src/app/components/ui/*"],
       "@/lib/*": ["./src/lib/*"],
       "@/utils/*": ["./src/utils/*"],
-      "@/sanity-studio/*": ["../sanity-studio/*"]
+      "@/sanity-studio/*": ["../sanity-studio/*"],
+      "@/videos/*": ["./src/app/components/videos/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

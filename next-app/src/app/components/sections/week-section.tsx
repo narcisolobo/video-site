@@ -1,7 +1,7 @@
 import { getRecordingsByWeek } from "@/lib/queries";
 import { client } from "@/lib/sanity";
 import { type LectureRecording } from "@/sanity-studio/sanity.types";
-import VideoList from "../video-list";
+import VideoList from "@/videos/video-list";
 
 interface WeekSectionProps {
   module: string;

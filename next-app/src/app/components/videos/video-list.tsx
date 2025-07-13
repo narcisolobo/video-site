@@ -1,5 +1,5 @@
 import { LectureRecording } from "@/sanity-studio/sanity.types";
-import VideoCard from "./videos/video-card";
+import VideoCard from "@/videos/video-card";
 import { groupRecordingsByDay } from "@/utils";
 
 interface VideoListProps {
