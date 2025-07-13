@@ -3,8 +3,6 @@ import { client } from "@/lib/sanity";
 import { type LectureRecording } from "@/sanity-studio/sanity.types";
 import VideoList from "../video-list";
 
-const options = { next: { revalidate: 30 } };
-
 interface WeekSectionProps {
   module: string;
   weekNumber: number;
@@ -15,7 +13,7 @@ async function WeekSection({ module, weekNumber }: WeekSectionProps) {
   const recordings = await client.fetch<LectureRecording[]>(
     RECORDINGS_QUERY,
     {},
-    options,
+    { cache: "no-store" },
   );
 
   return (
