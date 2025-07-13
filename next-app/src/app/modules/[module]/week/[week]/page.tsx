@@ -1,5 +1,5 @@
 import WeekSection from "@/sections/week-section";
-import { kebabToTitleCase } from "@/utils/kebab-to-title-case";
+import { kebabToTitleCase } from "@/utils";
 
 interface WeekPageProps {
   params: Promise<{ module: string; week: string }>;

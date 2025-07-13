@@ -30,6 +30,9 @@ const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  other: {
+    author: "Narciso Lobo",
+  },
 };
 
 interface RootLayoutProps {
@@ -42,7 +45,7 @@ function RootLayout({ children }: RootLayoutProps) {
       <body className={`${dosis.variable} ${orbitron.variable} antialiased`}>
         <Navbar />
         <MenuDrawer>
-          <main className="flex-1 px-4 pt-20 pb-4 md:container md:mx-auto">
+          <main className="flex-1 px-4 pt-20 pb-4 md:container md:mx-auto md:px-0">
             {children}
           </main>
           <Footer />
