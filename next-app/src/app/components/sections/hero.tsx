@@ -28,7 +28,7 @@ function HeroSection() {
           </p>
           <div className="card-actions justify-end">
             <Link
-              href="/modules/programming-basics/week/1"
+              href="/modules/web-fundamentals/week/2"
               className="btn btn-primary text-lg"
             >
               Videos
