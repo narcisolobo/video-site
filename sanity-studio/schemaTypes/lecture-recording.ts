@@ -27,7 +27,7 @@ const lectureRecordingType = defineType({
       type: 'string',
       validation: (Rule) => Rule.required(),
     }),
-    defineField({name: 'description', title: 'Description', type: 'text'}),
+    defineField({name: 'description', title: 'Description', type: 'array', of: [{type: 'block'}]}),
     defineField({
       name: 'week',
       title: 'Week',

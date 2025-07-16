@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { PortableText } from "@portabletext/react";
 import { urlFor } from "@/lib/sanity";
 import { formatDate } from "@/utils";
 import { LectureRecording } from "@/sanity-studio/sanity.types";
@@ -36,7 +37,11 @@ function VideoCard({ recording }: VideoCardProps) {
         <div className="collapse flex-grow">
           <input type="checkbox" defaultChecked />
           <h3 className="card-title collapse-title p-0">{recording.title}</h3>
-          <p className="collapse-content p-0">{recording.description}</p>
+          <div className="prose">
+            {recording?.description && (
+              <PortableText value={recording.description} />
+            )}
+          </div>
         </div>
         <div className="text-base-content/70 flex items-center justify-between text-xs uppercase">
           <p>
