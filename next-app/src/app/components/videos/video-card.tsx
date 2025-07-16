@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { PortableText } from "@portabletext/react";
+import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 import { urlFor } from "@/lib/sanity";
 import { formatDate } from "@/utils";
 import { LectureRecording } from "@/sanity-studio/sanity.types";
@@ -9,6 +9,27 @@ interface VideoCardProps {
 }
 
 function VideoCard({ recording }: VideoCardProps) {
+  const components: PortableTextReactComponents = {
+    types: {},
+    marks: {},
+    block: {
+      normal: ({ children }) => <p>{children}</p>,
+    },
+    hardBreak: () => null,
+    unknownMark: () => null,
+    unknownType: () => null,
+    unknownBlockStyle: () => null,
+    unknownList: () => null,
+    unknownListItem: () => null,
+    list: {
+      bullet: (props) => <ul className="list-disc pl-5">{props.children}</ul>,
+      number: (props) => (
+        <ol className="list-decimal pl-5">{props.children}</ol>
+      ),
+    },
+    listItem: (props) => <li>{props.children}</li>,
+  };
+
   return (
     <div
       key={recording._id}
@@ -37,9 +58,12 @@ function VideoCard({ recording }: VideoCardProps) {
         <div className="collapse flex-grow">
           <input type="checkbox" defaultChecked />
           <h3 className="card-title collapse-title p-0">{recording.title}</h3>
-          <div className="prose">
+          <div className="prose prose-p:mb-4">
             {recording?.description && (
-              <PortableText value={recording.description} />
+              <PortableText
+                value={recording.description}
+                components={components}
+              />
             )}
           </div>
         </div>
