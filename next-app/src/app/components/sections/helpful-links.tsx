@@ -1,5 +1,10 @@
 import { FaDiscord, FaGithubAlt } from "react-icons/fa";
-import { HiAcademicCap, HiExternalLink, HiVideoCamera } from "react-icons/hi";
+import {
+  HiAcademicCap,
+  HiClock,
+  HiExternalLink,
+  HiVideoCamera,
+} from "react-icons/hi";
 
 function HelpfulLinksSection() {
   return (
@@ -46,6 +51,27 @@ function HelpfulLinksSection() {
             <h2>Zoom</h2>
             <p className="text-xs font-semibold uppercase opacity-60">
               Class Zoom room
+            </p>
+          </section>
+          <button className="btn btn-square btn-ghost">
+            <HiExternalLink className="h-6 w-6" />
+          </button>
+        </li>
+        <li className="list-row hover:bg-base-200 relative">
+          <a
+            href="https://us02web.zoom.us/j/81554892956?pwd=inhUfVnD0wtBjFutqPC2HFhKivObob.1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute inset-0 z-10"
+            aria-label="Go to after hours Zoom room"
+          />
+          <div className="flex items-center justify-center">
+            <HiClock className="h-9 w-9" />
+          </div>
+          <section>
+            <h2>After Hours</h2>
+            <p className="text-xs font-semibold uppercase opacity-60">
+              After hours Zoom room
             </p>
           </section>
           <button className="btn btn-square btn-ghost">
