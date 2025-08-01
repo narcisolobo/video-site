@@ -28,7 +28,7 @@ function HeroSection() {
           </p>
           <div className="card-actions justify-end">
             <Link
-              href="/modules/sql-fundamentals/week/4"
+              href="/modules/intro-to-react/week/5"
               className="btn btn-primary text-lg"
             >
               Videos
